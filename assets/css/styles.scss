@@ -1,5 +1,17 @@
-$mobile: '576'
-$tablet: ''
+$desktop: '992px';
+$mobile: '568px';
+
+
+
+@media screen and (min-width: $desktop) {
+    h1 {
+        font-size: 2;
+    }
+    
+}
+
+
+
 body {
     display: grid;
     grid-template-areas:
