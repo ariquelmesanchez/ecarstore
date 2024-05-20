@@ -1,8 +1,9 @@
-@media screen and (min-width: 992px) {
-  h1 {
-    font-size: 2;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 body {
   display: grid;
   grid-template-areas: "header" "filter" "main" "footer";
@@ -10,8 +11,9 @@ body {
   height: 100vh;
 }
 body header {
+  color: rgb(142, 202, 230);
   grid-area: header;
-  background-color: aquamarine;
+  background-color: rgb(2, 48, 71);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,6 +25,7 @@ body header .header_title {
   gap: 15px;
 }
 body header .header_title img {
+  color: rgb(251, 133, 0);
   width: 60px;
 }
 body header .header_title h1 {
@@ -41,8 +44,9 @@ body header .header_nav nav ul {
   list-style: none;
 }
 body .order {
+  color: rgb(2, 48, 71);
   grid-area: filter;
-  background-color: burlywood;
+  background-color: rgb(251, 133, 0);
   padding: 20px;
   display: flex;
   flex-flow: column;
@@ -50,7 +54,8 @@ body .order {
 }
 body main {
   grid-area: main;
-  background-color: azure;
+  color: rgb(2, 48, 71);
+  background-color: rgb(142, 202, 230);
 }
 body main .card_container {
   display: flex;
@@ -63,9 +68,21 @@ body main .card_container img {
   width: 200px;
 }
 body footer {
+  color: rgb(142, 202, 230);
   grid-area: footer;
-  background-color: aquamarine;
+  background-color: rgb(2, 48, 71);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  h1 {
+    font-size: 2;
+  }
+  body {
+    grid-template-areas: "header header header" "filter main main" "footer footer footer";
+    grid-template-rows: 90px 1fr 90px;
+    grid-template-columns: 200px 1fr;
+  }
 }/*# sourceMappingURL=styles.css.map */

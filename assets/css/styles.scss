@@ -1,30 +1,33 @@
+$mobile: '576px';
 $desktop: '992px';
-$mobile: '568px';
 
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
-@media screen and (min-width: $desktop) {
-    h1 {
-        font-size: 2;
-    }
-    
 }
+
+
 
 
 
 body {
     display: grid;
     grid-template-areas:
-        "header"
-        "filter"
-        "main"
-        "footer"
+    "header"
+    "filter"
+    "main"
+    "footer"
     ;
     grid-template-rows: 90px 77px 1fr 90px;
     height: 100vh;
+    
     header {
+        color: rgb(142, 202, 230);
         grid-area: header;
-        background-color: aquamarine;
+        background-color: rgb(2, 48, 71);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -35,6 +38,7 @@ body {
             align-items: center;
             gap: 15px;
             img {
+                color: rgb(251, 133, 0);
                 width: 60px;
             }
             h1 {
@@ -59,8 +63,9 @@ body {
         }
     }
     .order {
+        color: rgb(2, 48, 71);
         grid-area: filter;
-        background-color: burlywood;
+        background-color: rgb(251, 133, 0);
         padding: 20px;
         display: flex;
         flex-flow: column;
@@ -68,7 +73,8 @@ body {
     }
     main {
         grid-area: main;
-        background-color: azure;
+        color: rgb(2, 48, 71);
+        background-color: rgb(142, 202, 230);
         .card_container {
             display: flex;
             flex-flow: column;
@@ -83,10 +89,27 @@ body {
     }
 
     footer {
+        color: rgb(142, 202, 230);
         grid-area: footer;
-        background-color: aquamarine;
+        background-color: rgb(2, 48, 71);
         display: flex;
         justify-content: center;
         align-items: center;
     }
+}
+
+@media screen and (min-width: $mobile) and (max-width: $desktop) {
+    h1 {
+        font-size: 2;
+    }
+
+    body{
+    grid-template-areas:
+    "header header header"
+    "filter main main"
+    "footer footer footer";
+    grid-template-rows: 90px 1fr 90px;
+    grid-template-columns: 200px 1fr;
+    }
+    
 }
