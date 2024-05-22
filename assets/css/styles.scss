@@ -101,7 +101,7 @@ body {
             display: flex;
             flex-flow: column;
             align-items: center;
-            padding: 10px;
+            padding: 0;
             border-radius: 15px;
 
             
@@ -171,19 +171,13 @@ body {
     main {
 
         grid-area: main;
-          
-
-        .card_container {
-            display: flex;
-           ;
-        }
-
-       
+        
         div {
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             align-items:center;
-            margin-left: 30px;
+            
+            
 
         }
     }
