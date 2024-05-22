@@ -168,7 +168,7 @@ body footer {
   body main div {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
   }
   body footer h1 {
     overflow: hidden;
